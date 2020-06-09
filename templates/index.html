@@ -1,0 +1,36 @@
+{% extends 'base.html' %}
+
+{% block head %}
+
+<title>Search Page</title>
+<link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+{% endblock %}
+
+{% block body %}
+<br><br>
+<text><b>List of Movies:</b></text><br><br>
+<text>1.Space Force</text> &nbsp;
+<text>2.Ricky and Morty</text>&nbsp;
+<text>3.Snowpiercer</text>&nbsp;
+<text>4.Game of Thrones</text>&nbsp;
+<text>5.Killing Eve</text><br><br>
+<text>6.13 Reasons Why</text>&nbsp;
+<text>7.Community</text>&nbsp;
+<text>8.Sweet Magnolias</text>&nbsp;
+<text>9.Uncut Gems</text>&nbsp;
+<text>10.Dark</text>&nbsp;
+
+
+<div class="content">
+    <h1 style="text-align: center">Search</h1>
+
+
+    <div class="form">
+        <form action="/review" method="POST">
+
+            <input type="text" name="content" id="content">
+            <input type="submit" value="Search">
+        </form>
+    </div>
+</div>
+{% endblock %}
